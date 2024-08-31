@@ -34,8 +34,13 @@ export class HomeComponent {
       this._promoCode.redeemCode(this.form.value).subscribe(
         {
           next: (data: any) => {
-            this.promoCodeData = data;
+            this.promoCodeData = data.data;
             this.showPromoCodeInfo = true;
+            this._snackbar.openSnackBar(
+              data.message,
+              'bg-success',
+              'text-white'
+            );
           },
           error: (error) => {
             console.log(error);
