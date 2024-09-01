@@ -38,8 +38,7 @@ export class HomeComponent {
             this.showPromoCodeInfo = true;
             this._snackbar.openSnackBar(
               data.message,
-              'bg-success',
-              'text-white'
+              'snackbar-success',
             );
           },
           error: (error) => {
@@ -47,8 +46,7 @@ export class HomeComponent {
             this.showPromoCodeInfo = false;
             this._snackbar.openSnackBar(
               error.error.message,
-              'bg-danger',
-              'text-white'
+              'snackbar-error',
             );
           }
         }

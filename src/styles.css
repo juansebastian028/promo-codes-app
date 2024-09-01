@@ -6,3 +6,23 @@ body {
     background-color: #121212;
     color: #ffffff;
 }
+
+.snackbar-success {
+    .mdc-snackbar__surface {
+      background-color: green !important;
+    }
+  
+    .mdc-snackbar__label {
+      color: white !important;
+    }
+}
+
+.snackbar-error {
+    .mdc-snackbar__surface {
+      background-color: red !important;
+    }
+  
+    .mdc-snackbar__label {
+      color: white !important;
+    }
+  }
