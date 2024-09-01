@@ -42,7 +42,6 @@ export class HomeComponent {
             );
           },
           error: (error) => {
-            console.log(error);
             this.showPromoCodeInfo = false;
             this._snackbar.openSnackBar(
               error.error.message,
@@ -51,11 +50,6 @@ export class HomeComponent {
           }
         }
       );
-      // this.form.setValue({
-      //   code: '',
-      //   email: '',
-      // });
-      // this.submitted = false;
     }
   }
 }

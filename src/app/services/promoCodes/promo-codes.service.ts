@@ -15,13 +15,10 @@ export class PromoCodesService {
   }
 
   redeemCode(promoCode: PromoCode): Observable<PromoCode> {
-    // Crear los query params
-    // Crear los query params
     const params = new HttpParams()
       .set('email', promoCode.email)
       .set('code', promoCode.code);
-
-    // Realizar la solicitud HTTP POST con los query params
+      
     return this.http.post<PromoCode>(`${this.path}/promo-codes/redeem`, {}, { params });
   }
 
